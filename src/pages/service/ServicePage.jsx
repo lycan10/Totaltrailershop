@@ -4,9 +4,8 @@ import Footer from "../../components/footer/Footer";
 import image from "../../assets/servbanner.jpeg";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import mission from "../../assets/abt3.jpg";
-import vision from "../../assets/vision.png";
-import banner from "../../assets/abt5.jpg";
+import banner from "../../assets/abt77.jpeg";
+import banner3 from "../../assets/truck.jpeg";
 import banner2 from "../../assets/abt66.jpg";
 
 import s1 from "../../assets/side1.png";
@@ -19,18 +18,8 @@ import s3 from "../../assets/side3.png";
 
 import "./servicepage.css";
 
-import v1 from "../../assets/v1.png";
-import v2 from "../../assets/v2.png";
-import v3 from "../../assets/v3.png";
-import v4 from "../../assets/v4.png";
-
-import team1 from "../../assets/team1.jpg";
-import team2 from "../../assets/team2.jpg";
-import team3 from "../../assets/team3.jpg";
-
 import ReactGA from "react-ga";
 import { useLocation } from "react-router-dom";
-import AboutImgs from "../../components/aboutimgs/AboutImgs";
 import GoogleReviews from "../../components/googlereviews/GoogleReviews";
 import Stats from "../../components/stats/Stats";
 
@@ -71,10 +60,13 @@ const ServicePage = () => {
               >
                <h1>Total peace of mind is our mantra. </h1>
                <p>
-              At Total Trailer, we provide a comprehensive range of trailer repair and maintenance services tailored to keep your equipment in optimal condition. Our services include axle repairs, brake and drum replacements, electrical work, suspension adjustments, and lube jobs, all executed with meticulous attention to detail. Whether you need routine maintenance or extensive repairs, our skilled technicians are equipped to handle every aspect with the highest standards of safety and quality.
-             </p>
+               At Total Trailer and Truck, we provide a comprehensive range of trailer repair and maintenance services designed to keep your equipment running smoothly and safely. Our offerings include axle repairs, brake and drum replacements, electrical diagnostics, suspension adjustments, and thorough lube jobs—all performed with precision and care by experienced technicians. Whether it’s routine maintenance or in-depth repairs, we’re committed to delivering quality service with minimal downtime.
+            </p>
+            <p>
+            We also specialize in truck accessory installations, offering top-tier products from trusted brands like Rough Country, Air Lift, Buyers Products, Curt, Lippert, and more. From lighting and toolboxes to lift kits and full custom upfitting, we help you enhance your truck's functionality and performance. No matter your needs, you can count on Total Trailer and Truck for expert service and reliable results—every time.
+           </p>
               </div>
-              <div className="services-content-img">
+              <div className="services-content-img img-shadow">
                 <img src={banner} alt="" />
               </div>
               <div className="services-content-list-container">
@@ -135,6 +127,24 @@ const ServicePage = () => {
                 We offer jack mounting services to ensure safe, stable support when loading or unloading your trailer, minimizing the risk of accidents.
                 </p>
                 </div>
+                <div className="services-content-img img-shadow">
+                <img src={banner3} alt="" />
+              </div>
+                <div className="services-content-list">
+  <h3>9. Storage & Protection</h3>
+  <p>Toolboxes, tonneau covers, bed slides, ladder racks, and cab protectors keep your gear organized, secure, and protected from the elements—on and off the job site.</p>
+</div>
+
+<div className="services-content-list">
+  <h3>10. Safety & Visibility</h3>
+  <p>From backup alarms and strobes to cab marker lights and beacons, our safety accessories ensure your vehicle is seen and heard—enhancing safety on busy roads and job sites.</p>
+</div>
+
+<div className="services-content-list">
+  <h3>11. Custom Upgrades</h3>
+  <p>We offer lift gates, suspension kits, step tubes, decals, and full fleet wraps—customized to boost performance, functionality, and your brand’s visibility.</p>
+</div>
+
               </div>
 
      

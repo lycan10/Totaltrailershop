@@ -17,14 +17,16 @@
     margin-bottom: 1rem;
   }
 .gallery-title h1 {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     color: #333;
     margin-bottom: 0.5rem;
-    font-weight: 600;
+    font-weight: 700;
+    font-family: var(--font-family);
   }
   
   .gallery-title p {
-    font-size: 1rem;
+    font-family: var(--font-family);
+    font-size: 16px;
     color: #666;
     line-height: 1.6;
     max-width: 800px;
@@ -56,13 +58,14 @@ padding-bottom: 1rem;
 }
 .modal-gallery-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 330px 330px 330px ;
     row-gap: 1rem;
+    column-gap: 1rem;
     margin: 0 auto;
     justify-content: center;
     overflow: scroll !important;
   height: 700px;
-  padding: 1rem 0 2rem;
+  padding: 1rem 2rem 1rem;
 }
 .card-flip{
     width: 300px;
@@ -86,8 +89,37 @@ padding-bottom: 1rem;
     text-align: center;
 }
 
-.modal-img-front{
 
+.before-text{
+  margin-top: 3rem;
+}
+.before-text h1{
+  font-family: var(--font-family);
+  font-size: 21px;
+}
+/* .before-text p{
+  margin-bottom: 1rem !important;
+} */
+
+.before-text span{
+  margin-top: 2rem !important;
+  color: var(--background-color1);
+  font-family: var(--font-family);
+  font-size: 12px;
+}
+.gallery-before-and-after-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 1.25rem !important;
+}
+.ba-container{
+  width: 100%;
+  height: 450px;
+}
+.ba-container img{
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
 }
 
 @media screen and (max-width: 1440px) {
@@ -109,6 +141,24 @@ padding-bottom: 1rem;
 }
 
 @media screen and (max-width: 1200px) {
+  .before-text h1{
+    font-family: var(--font-family);
+    font-size: 21px;
+  }
+  .gallery-before-and-after-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1rem !important;
+  }
+  .ba-container{
+    width: 100%;
+    height: 400px;
+  }
+  .ba-container img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
     .gallery-title {
         margin-bottom: 0.5rem;
       }
@@ -169,9 +219,33 @@ padding-bottom: 1rem;
     }
 }
 @media screen and (max-width: 800px) {
+  
+  .before-text h1{
+    font-family: var(--font-family);
+    font-size: 21px !important;
+  }
+  .gallery-before-and-after-container{
+    display: grid;
+    grid-template-columns: 1fr !important;
+    margin: 0 1rem;
+  }
+  .ba-container{
+    width: 100%;
+    height: 450px;
+  }
+  .ba-container img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+  }
     .gallery-title {
-        margin-left: 0.8rem;
+        margin-left: 1rem;
         margin-bottom: 0rem;
+        font-size: 32px;
+        margin-top: 1rem;
+      }
+      .gallery-title h1{
+        font-size: 28px;
       }
     .gallery-container{
         padding: 2rem 1rem;
@@ -199,9 +273,7 @@ padding-bottom: 1rem;
         max-width: 800px;
         margin: 0 auto;
       }
-      .main-modal{
-
-      }
+   
       .modal-gallery-container{
         display: grid;
         grid-template-columns: 1fr 1fr ;
@@ -212,9 +284,7 @@ padding-bottom: 1rem;
       height: 400px;
       padding: 1rem 0 2rem;
     }
-    .card-flip{
-   
-    }
+
     
     .modal-img{
         padding: 1rem 1rem 0;
@@ -242,8 +312,22 @@ padding-bottom: 1rem;
     }
 }
 @media screen and (max-width: 500px) {
+  .gallery-before-and-after-container{
+    display: grid;
+    grid-template-columns: 1fr !important;
+    margin: 0 0rem;
+  }
+  .ba-container{
+    width: 100%;
+    height: 300px;
+  }
+  .ba-container img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
     .gallery-container{
-        padding: 2rem 1rem;
+        padding: 1rem 1rem 2rem;
         color: #333;
     }
     .gallerycards-container{
@@ -258,7 +342,7 @@ padding-bottom: 1rem;
         margin-left: 0;
       }
       .gallery-title h1 {
-        font-size: 2rem;
+        font-size: 1.6rem;
         color: #333;
         margin-bottom: 0.5rem;
         font-weight: 600;

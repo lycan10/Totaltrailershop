@@ -80,7 +80,7 @@ if (window.location.pathname === newUrl) {
 
         <div className="contact-content">
           <div className="contact-details">
-            <p>At Total Trailer, we are here to assist you with any questions, inquiries, or assistance you may need. Feel free to get in touch with us through the following methods:</p>
+            <p>At Total Trailer and Truck, we are here to assist you with any questions, inquiries, or assistance you may need. Feel free to get in touch with us through the following methods:</p>
 
             {/* <div className="contact-banner">
               <img src={image1} alt="" />
@@ -95,7 +95,10 @@ if (window.location.pathname === newUrl) {
             <div className="contact-info">
               <BiLogoGmail className='contact-icons' />
               <p>Email: totaltrailerparts@outlook.com</p>
+             
+
             </div>
+            <p>totaltrailerparts@gmail.com</p>
           </div>
           <div className="customer-support">
             <h1>Visit us: </h1>

@@ -27,7 +27,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #ddd;
-  padding: 0rem 5rem;
+  padding: 1rem 5rem;
 }
 /* .navbar-top-welcome {
 } */
@@ -105,7 +105,12 @@
 }
 .navbar-logo-rrc img{
   width: 100px;
-  height: 100%;
+  height: 40px; 
+  object-fit: cover;
+}
+.navbar-logo-natda img{
+  width: 155px;
+  height: 65px;
   object-fit: cover;
 }
 .navbar-middle-content {
@@ -140,14 +145,14 @@
 .navbar-tel-number h1 {
   font-family: var(--font-family);
   margin: 0;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 800;
   margin-bottom: 0.2rem;
 }
 .navbar-tel-number p {
   font-family: var(--font-family);
   margin: 0;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 400;
 }
 .navbar-middle-cart {
@@ -449,6 +454,8 @@
   justify-content: center;
   align-items: center;
   padding: 0 1.5rem;
+  margin: 0 !important;
+
 }
 
 .navbar-links ul li a {
@@ -456,6 +463,13 @@
   text-decoration: none;
   color: var(--bs-body-color);
   font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
 }
 .navbar-links ul li:hover {
   background-color: rgb(245, 245, 245);
@@ -502,7 +516,7 @@
   color: var(--background-color1);
 }
 .navbar-cta h1 {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
 }
 .icon2 {
@@ -573,16 +587,28 @@ padding: 0  1.5rem 1.5rem;
   padding-right: 2rem;
   outline: none;
   border-radius: 0.5rem;
-
+}
+.modal-booking-form input.input-error,
+.modal-booking-form select.input-error {
+  border: 1.5px solid #e53e3e !important;
+  background-color: #fff5f5 !important;
+}
+.modal-booking-field-error {
+  color: #e53e3e;
+  font-size: 0.75rem;
+  margin-top: 4px;
+  display: block;
+  text-align: left;
+  line-height: 1.2;
 }
 .modal-booking-button{
   margin: 0 1.5rem 1.5rem;
-  width: 200px;
+  width: 150px;
   height: 50px;
 display: flex;
 justify-content: center;
 align-items: center;
-  border-radius: 2rem;
+  border-radius: 5px;
   background-color: var(--background-color1);
 
 } 
@@ -592,6 +618,12 @@ align-items: center;
 } 
 .booking-modal{
   overflow: scroll;
+}
+.modal-booking-button{
+  cursor: pointer;
+}
+.modal-booking-button p{
+  cursor: pointer;
 }
 @media screen and (max-width: 1200px) {
   .navbar-mini {
@@ -1040,7 +1072,7 @@ align-items: center;
     color: var(--background-color1);
   }
   .navbar-cta h1 {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 400;
   }
   .icon2 {
@@ -1344,8 +1376,8 @@ align-items: center;
     background-color: white;
     left: 0;
     z-index: 40;
-    top: -55px;
-    padding: 1.5rem 2rem;
+    top: -35px;
+    padding: 1.5rem 2rem 0;
   }
   /* .navbar-menu_links {
   } */
@@ -1358,7 +1390,7 @@ align-items: center;
   }
   .navbar-menu_links ul a {
     text-decoration: none;
-    font-size: 13px;
+    font-size: 14px;
     color: var(--color);
   }
   .navbar-menu_links ul a:hover {
@@ -1367,7 +1399,7 @@ align-items: center;
   .navbar-menu_links ul li span {
     font-family: var(--font-family);
     margin: 0;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 300;
     color: var(--background-color1);
   }
@@ -1405,13 +1437,7 @@ align-items: center;
      }
      .modal-booking-button{
       margin: 0 0rem 1rem;
-      width: 150px;
-      height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-      border-radius: 2rem;
-      background-color: var(--background-color1);
+      width: 140px;
     
     } 
     .modal-header{
@@ -1495,8 +1521,8 @@ align-items: center;
     background-color: white;
     left: 0;
     z-index: 40;
-    top: -60px;
-    padding: 1.5rem 2rem;
+    top: -40px;
+    padding: 1.5rem 2rem 0;
   }
   /* .navbar-menu_links {
   } */
@@ -1509,6 +1535,7 @@ align-items: center;
   }
   .navbar-menu_links ul a {
     text-decoration: none;
+    font-size: 13px;
   }
   .navbar-menu_links ul li span {
     font-family: var(--font-family);

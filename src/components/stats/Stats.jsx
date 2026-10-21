@@ -11,12 +11,12 @@ const Stats = () => {
     <div className='stats'>
         <div className="stats-content">
             <img src={s1} alt="" />
-            <h2>18</h2>
-            <p>Years of Experience</p>
+            <h2>3000+</h2>
+            <p>Trailer parts available</p>
         </div>
         <div className="stats-content">
             <img src={s2} alt="" />
-            <h2>4</h2>
+            <h2>5</h2>
             <p>Expert Technicians</p>
         </div>
         <div className="stats-content">
@@ -26,7 +26,7 @@ const Stats = () => {
         </div>
         <div className="stats-content">
             <img src={s4} alt="" />
-            <h2>70k</h2>
+            <h2>80k</h2>
             <p>Completed projects</p>
         </div>
     </div>

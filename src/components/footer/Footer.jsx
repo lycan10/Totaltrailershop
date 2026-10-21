@@ -23,12 +23,13 @@ import ico3 from "../../assets/ic3.png";
 import { Link } from "react-router-dom";
 import { Button, Modal } from "react-bootstrap";
 import AuthContext from "../../AuthContext";
+import Marquee from "react-fast-marquee";
 
 const Footer = () => {
-  const {
-    closeModal,
-    authState: { showModal },
-  } = useContext(AuthContext);
+  // const {
+  //   closeModal,
+  //   authState: { showModal },
+  // } = useContext(AuthContext);
 
   const navigateToHome = () => {
     // Use the URL of the page you want to navigate to
@@ -134,7 +135,7 @@ const Footer = () => {
   const date = new Date();
 
   return (
-    <>
+
       <div className="footer">
         <div className="footer-container-CTA">
           <div className="footer-container-CTA-socials">
@@ -163,13 +164,19 @@ const Footer = () => {
               <img src={icon5} alt="" />
             </div>
           </div>
-          <div className="footer-container-CTA-newsletter">
+          <div className="marquee-cont-footer" >
+            <Marquee >
+              <p style={{color: "white"}}>Introducing the Total Trailer and Truck 10% Loyalty Card! Earn exclusive discounts on parts and services – Sign up today and start saving!</p>
+            </Marquee>
+          </div>
+        
+          {/* <div className="footer-container-CTA-newsletter">
             <h1>SIGN UP FOR NEWSLETTER</h1>
             <div className="footer-container-CTA-newsleter-button">
               <input type="text" placeholder="Enter Your Email Here" />
               <button>Subscribe Now</button>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="footer-container">
           <div className="footer-top">
@@ -191,6 +198,7 @@ const Footer = () => {
                   </div>
                   <div className="footer-info-text">
                     <p>totaltrailerparts@outlook.com</p>
+                    <p>totaltrailerparts@gmail.com</p>
                   </div>
                 </div>
                 <div className="footer-info">
@@ -208,38 +216,42 @@ const Footer = () => {
                 <h1>ABOUT TTP</h1>
                 <ul>
                   <li>
-                    <span onClick={navigateToAbout}>About Us</span>
+                    <Link reloadDocument to='/about'> <span>About Us</span></Link>
+                  
+                  </li>
+                  {/* <li>
+                    <Link><span onClick={navigateToAbout}>Gallery</span></Link>
+             
+                  </li> */}
+                    <li>
+           <Link reloadDocument to='/gallery'>         <span >Gallery</span></Link>
                   </li>
                   <li>
-                    <span onClick={navigateToAbout}>Gallery</span>
-                  </li>
-                  <li>
-                    <span onClick={navigateToTermsOfService}>Terms of Use</span>
+                    <Link reloadDocument to='/terms'> <span >Terms of Use</span></Link>
+                
                   </li>
 
                   <li>
-                    <span onClick={navigateToPrivacy}>Privacy Policy</span>
+                    <Link reloadDocument to='/privacy'><span >Privacy Policy</span></Link>
                   </li>
-                  <li>
-                    <span onClick={navigateToContact}>Site Map</span>
-                  </li>
+                
                 </ul>
               </div>
               <div className="footer-top2">
                 <h1>CUSTOMER SERVICE</h1>
                 <ul>
                   <li>
-                    <span onClick={navigateToHome}>Home</span>
+                   <Link reloadDocument to='/'> <span>Home</span></Link>
                   </li>
                   <li>
-                    <span onClick={navigateToProduct}>Service</span>
+                    <Link reloadDocument to='/services' ><span >Service</span></Link>
                   </li>
                   <li>
-                    <span onClick={navigateToReturn}>Return Policy</span>
+                   <Link reloadDocument to='/return' > <span >Return Policy</span></Link>
                   </li>
 
                   <li>
-                    <span onClick={navigateToContact}>Contact Us</span>
+            <Link reloadDocument to='/contact'  >        <span >Contact Us</span></Link>
                   </li>
                 </ul>
               </div>
@@ -249,7 +261,7 @@ const Footer = () => {
             <div className="footer-bottom1">
               <p>
                 {" "}
-                Copyright © {date.getFullYear()} TotalTrailerParts. All Rights
+                Copyright © {date.getFullYear()} Total Trailer and Truck. All Rights
                 Reserved.{" "}
               </p>
             </div>
@@ -268,22 +280,22 @@ const Footer = () => {
         </div>
       </div>
 
-      <Modal show={showModal} onHide={closeModal}>
-        <Modal.Header closeButton>
-          <Modal.Title>Please Login</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <p>You need to log in to access the wishlist.</p>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={closeModal}>Close</Button>
-          {/* Add a login button or link to your login page */}
-          <Link to="/login" onClick={closeModal}>
-            <Button variant="primary">Login</Button>
-          </Link>
-        </Modal.Footer>
-      </Modal>
-    </>
+      // <Modal show={showModal} onHide={closeModal}>
+      //   <Modal.Header closeButton>
+      //     <Modal.Title>Please Login</Modal.Title>
+      //   </Modal.Header>
+      //   <Modal.Body>
+      //     <p>You need to log in to access the wishlist.</p>
+      //   </Modal.Body>
+      //   <Modal.Footer>
+      //     <Button variant="secondary" onClick={closeModal}>Close</Button>
+      //     {/* Add a login button or link to your login page */}
+      //     <Link to="/login" onClick={closeModal}>
+      //       <Button variant="primary">Login</Button>
+      //     </Link>
+      //   </Modal.Footer>
+      // </Modal>
+ 
   );
 };
 
