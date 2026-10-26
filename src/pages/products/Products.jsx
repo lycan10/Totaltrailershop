@@ -6,7 +6,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import "./products.css";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
-import banner from "../../assets/contact.jpg";
+import banner from "../../assets/contact.webp";
 import Slider from "react-slick";
 import { RxHamburgerMenu } from "react-icons/rx";
 import BestSellerCards from "../../constant/bestSellerCards/BestSellerCards";
@@ -14,15 +14,15 @@ import BestSellerCards from "../../constant/bestSellerCards/BestSellerCards";
 import Accordion from "react-bootstrap/Accordion";
 import Table from "react-bootstrap/Table";
 
-import ad1 from "../../assets/2sp.png";
-import ad2 from "../../assets/ad6.jpeg";
-import ad3 from "../../assets/tp12.jpg";
-import ad4 from "../../assets/tp12.jpg";
-import filter from "../../assets/filter.png";
+import ad1 from "../../assets/2sp.webp";
+import ad2 from "../../assets/ad6.webp";
+import ad3 from "../../assets/tp12.webp";
+import ad4 from "../../assets/tp12.webp";
+import filter from "../../assets/filter.webp";
 
 import Modal from "react-bootstrap/Modal";
 import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
-import banner2 from "../../assets/5off.png";
+import banner2 from "../../assets/5off.webp";
 import Reviews from "../../components/reviews/Reviews";
 import Newsletter from "../../components/newsletter/Newsletter";
 
@@ -189,7 +189,7 @@ const Products = () => {
     setValue(e.target.value);
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => { };
 
   const handleMinPriceChange = (e) => {
     setMinPrice(e.target.value);
@@ -423,7 +423,7 @@ const Products = () => {
 
             {displaySection === "main" && (
               <div className="product-right-container">
-                 <div className="products-right-bestseller">
+                <div className="products-right-bestseller">
                   <Bestseller noPad />
                 </div>
                 <div className="products-right">
@@ -455,17 +455,15 @@ const Products = () => {
                   <div className="catalogue-top-filter-left">
                     <div className="catalogue-top-filter-options">
                       <div
-                        className={`catalogue-top-filter-options-grid ${
-                          viewMode === "grid" ? "active" : ""
-                        }`}
+                        className={`catalogue-top-filter-options-grid ${viewMode === "grid" ? "active" : ""
+                          }`}
                         onClick={() => setViewMode("grid")}
                       >
                         <img src={grid} alt="" />
                       </div>
                       <div
-                        className={`catalogue-top-filter-options-list ${
-                          viewMode === "list" ? "active" : ""
-                        }`}
+                        className={`catalogue-top-filter-options-list ${viewMode === "list" ? "active" : ""
+                          }`}
                         onClick={() => setViewMode("list")}
                       >
                         <img src={list} alt="" />

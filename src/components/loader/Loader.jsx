@@ -9,9 +9,9 @@ const Loader = ({ fullscreen }) => {
         justifyContent: "center",
         ...(fullscreen
           ? {
-              height: "100vh",
-              width: "100%",
-            }
+            height: "100vh",
+            width: "100%",
+          }
           : {}),
       }}
     >

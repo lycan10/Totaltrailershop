@@ -1,0 +1,50 @@
+.promotion{
+
+}
+.promotion-container{
+    background-color: var(--background-color1);
+    padding: 1rem 0rem;
+    width: 100%;
+}
+.promotion-container p{
+    font-family: var(--font-family);
+    font-size: 16px;
+   color: white; margin-left: 1.5rem; margin-right:1.5rem
+}
+.promotion-container span{
+    font-family: var(--font-family);
+    font-size: 16px;
+   color: white; margin-left: 1.5rem; margin-right:1.5rem
+}
+
+@media screen and (max-width: 1200px) {
+    .promotion-container{
+        background-color: var(--background-color1);
+        padding: 1rem 0rem;
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 800px) {
+    .promotion-container{
+        background-color: var(--background-color1);
+        padding: 1.5rem 0rem;
+        width: 100%;
+    }
+    
+    
+}
+@media screen and (max-width: 500px) {
+    .promotion-container{
+        background-color: var(--background-color1);
+        padding: 1rem 0rem;
+        width: 100%;
+    }
+    .promotion-container p{
+        font-family: var(--font-family);
+        font-size: 14px;
+       color: white; margin-left: 1.5rem; margin-right:1.5rem
+    }
+    
+}
+

@@ -31,103 +31,108 @@ import Product from "./pages/product/Product.jsx";
 import ServicePage from "./pages/service/ServicePage.jsx";
 
 import Gallery from "./pages/gallery/Gallery.jsx";
+import ThankYou from "./pages/thankyoupage/ThankYou.jsx";
 
 function App() {
-  const [state, dispatch] = useReducer(
-    (prevState, action) => {
-      switch (action.type) {
-        case "RESTORE_TOKEN":
-          return {
-            ...prevState,
-            user: action.user,
-            checkout: action.checkout,
-            isLoading: false,
-            isSignout: action.isSignout,
-          };
-        case "SIGN_IN":
-          return {
-            ...prevState,
-            isSignout: false,
-            user: action.user,
-          };
-        case "SIGN_OUT":
-          return {
-            ...prevState,
-            isSignout: true,
-            user: null,
-            cart: [],
-            wishlist: [],
-            checkout: {},
-          };
-        case "SHOW_MODAL":
-          return {
-            ...prevState,
-            showModal: action.showModal,
-          };
-        case "UPDATE_CART":
-          return {
-            ...prevState,
-            cart: action.cart,
-          };
-        case "UPDATE_WISHLIST":
-          return {
-            ...prevState,
-            wishlist: action.wishlist,
-          };
-        case "UPDATE_CHECKOUT":
-          return {
-            ...prevState,
-            checkout: action.checkout,
-          };
-        default:
-          return prevState;
-      }
-    },
-    {
-      isLoading: true,
-      isSignout: true,
-      user: null,
-      cart: [],
-      wishlist: [],
-      checkout: {},
-      showModal: false,
-    }
-  );
+  window.dataLayer.push({
+    event: 'pageview'
+  });
 
-  useEffect(() => {
-    // Fetch the token from storage then navigate to our appropriate place
-    const bootstrapAsync = async () => {
-      let user;
-      let checkout;
+  // const [state, dispatch] = useReducer(
+  //   (prevState, action) => {
+  //     switch (action.type) {
+  //       case "RESTORE_TOKEN":
+  //         return {
+  //           ...prevState,
+  //           user: action.user,
+  //           checkout: action.checkout,
+  //           isLoading: false,
+  //           isSignout: action.isSignout,
+  //         };
+  //       case "SIGN_IN":
+  //         return {
+  //           ...prevState,
+  //           isSignout: false,
+  //           user: action.user,
+  //         };
+  //       case "SIGN_OUT":
+  //         return {
+  //           ...prevState,
+  //           isSignout: true,
+  //           user: null,
+  //           cart: [],
+  //           wishlist: [],
+  //           checkout: {},
+  //         };
+  //       case "SHOW_MODAL":
+  //         return {
+  //           ...prevState,
+  //           showModal: action.showModal,
+  //         };
+  //       case "UPDATE_CART":
+  //         return {
+  //           ...prevState,
+  //           cart: action.cart,
+  //         };
+  //       case "UPDATE_WISHLIST":
+  //         return {
+  //           ...prevState,
+  //           wishlist: action.wishlist,
+  //         };
+  //       case "UPDATE_CHECKOUT":
+  //         return {
+  //           ...prevState,
+  //           checkout: action.checkout,
+  //         };
+  //       default:
+  //         return prevState;
+  //     }
+  //   },
+  //   {
+  //     isLoading: true,
+  //     isSignout: true,
+  //     user: null,
+  //     cart: [],
+  //     wishlist: [],
+  //     checkout: {},
+  //     showModal: false,
+  //   }
+  // );
 
-      try {
-        user = localStorage.getItem("user");
-        user = JSON.parse(user);
+  // useEffect(() => {
+  //   // Fetch the token from storage then navigate to our appropriate place
+  //   const bootstrapAsync = async () => {
+  //     let user;
+  //     let checkout;
 
-        checkout = sessionStorage.getItem("checkout");
-        checkout = checkout ? JSON.parse(checkout) : {};
-      } catch (e) {
-        // Restoring token failed
-      }
+  //     try {
+  //       user = localStorage.getItem("user");
+  //       user = JSON.parse(user);
 
-      // After restoring token, we may need to validate it in production apps
+  //       checkout = sessionStorage.getItem("checkout");
+  //       checkout = checkout ? JSON.parse(checkout) : {};
+  //     } catch (e) {
+  //       // Restoring token failed
+  //     }
 
-      // This will switch to the App screen or Auth screen and this loading
-      // screen will be unmounted and thrown away.
-      dispatch({
-        type: "RESTORE_TOKEN",
-        user,
-        checkout,
-        isSignout: user ? false : true,
-      });
-    };
+  //     // After restoring token, we may need to validate it in production apps
 
-    bootstrapAsync();
+  //     // This will switch to the App screen or Auth screen and this loading
+  //     // screen will be unmounted and thrown away.
+  //     dispatch({
+  //       type: "RESTORE_TOKEN",
+  //       user,
+  //       checkout,
+  //       isSignout: user ? false : true,
+  //     });
+  //   };
 
-    authContext.fetchCart();
-    authContext.fetchWishlist();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  //   bootstrapAsync();
+
+  //   authContext.fetchCart();
+  //   authContext.fetchWishlist();
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   // const authContext = useMemo(
   //   () => ({
@@ -166,57 +171,57 @@ function App() {
     }
   };
 
-  const authContext = {
-    signIn: async (user) => {
-      // In a production app, we need to send some data (usually username, password) to server and get a token
-      // We will also need to handle errors if sign in failed
-      // After getting token, we need to persist the token using `SecureStore`
-      // In the example, we'll use a dummy token
+  // const authContext = {
+  //   signIn: async (user) => {
+  //     // In a production app, we need to send some data (usually username, password) to server and get a token
+  //     // We will also need to handle errors if sign in failed
+  //     // After getting token, we need to persist the token using `SecureStore`
+  //     // In the example, we'll use a dummy token
 
-      localStorage.setItem("user", JSON.stringify(user));
+  //     localStorage.setItem("user", JSON.stringify(user));
 
-      dispatch({ type: "SIGN_IN", user });
-    },
-    signOut: async () => {
-      localStorage.removeItem("user");
+  //     dispatch({ type: "SIGN_IN", user });
+  //   },
+  //   signOut: async () => {
+  //     localStorage.removeItem("user");
 
-      dispatch({ type: "SIGN_OUT" });
-    },
-    closeModal: () => {
-      dispatch({ type: "SHOW_MODAL", showModal: false });
-    },
-    gatedAction: (action) => {
-      if (state.isSignout) {
-        dispatch({ type: "SHOW_MODAL", showModal: true });
-        return () => null;
-      }
-      return action;
-    },
-    fetchCart: async () => {
-      const cart = await strapi.getCart();
-      dispatch({ type: "UPDATE_CART", cart });
-    },
-    fetchWishlist: async () => {
-      if (!state.isSignout) {
-        const wishlist = await strapi.getWishlist();
-        dispatch({ type: "UPDATE_WISHLIST", wishlist });
-      }
-    },
-    updateCheckout: (checkout) => {
-      sessionStorage.setItem("checkout", JSON.stringify(checkout));
+  //     dispatch({ type: "SIGN_OUT" });
+  //   },
+  //   closeModal: () => {
+  //     dispatch({ type: "SHOW_MODAL", showModal: false });
+  //   },
+  //   gatedAction: (action) => {
+  //     if (state.isSignout) {
+  //       dispatch({ type: "SHOW_MODAL", showModal: true });
+  //       return () => null;
+  //     }
+  //     return action;
+  //   },
+  //   fetchCart: async () => {
+  //     const cart = await strapi.getCart();
+  //     dispatch({ type: "UPDATE_CART", cart });
+  //   },
+  //   fetchWishlist: async () => {
+  //     if (!state.isSignout) {
+  //       const wishlist = await strapi.getWishlist();
+  //       dispatch({ type: "UPDATE_WISHLIST", wishlist });
+  //     }
+  //   },
+  //   updateCheckout: (checkout) => {
+  //     sessionStorage.setItem("checkout", JSON.stringify(checkout));
 
-      dispatch({ type: "UPDATE_CHECKOUT", checkout });
-    },
-    authState: state,
-  };
+  //     dispatch({ type: "UPDATE_CHECKOUT", checkout });
+  //   },
+  //   authState: state,
+  // };
 
-  if (state.isLoading) {
-    return null;
-  }
+  // if (state.isLoading) {
+  //   return null;
+  // }
 
   return (
     <div className="App">
-      <AuthContext.Provider value={authContext}>
+      {/* <AuthContext.Provider value={authContext}>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -235,6 +240,7 @@ function App() {
             <Route path="/payment" element={<Payment />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/services" element={<ServicePage />} />
+            <Route path="/thankyou" element={<ThankYou />} />
         
             <Route path="/gallery" element={<Gallery />} />
             {state.isSignout ? (
@@ -249,8 +255,41 @@ function App() {
             )}
           </Routes>
         </BrowserRouter>
-      </AuthContext.Provider>
-      <ToastContainer />
+      </AuthContext.Provider> */}
+      <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/products:subcategory" element={<Products />} />
+            <Route path="/product/:id" element={<Product />} />
+            <Route path="/catalogue" element={<Catalogue />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/soon" element={<Soon />} />
+            <Route path="/return" element={<ReturnPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
+            <Route path="/deals" element={<Deals />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/payment" element={<Payment />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/services" element={<ServicePage />} />
+            <Route path="/thankyou" element={<ThankYou />} />
+        
+            <Route path="/gallery" element={<Gallery />} />
+            {/* {state.isSignout ? (
+              <>
+                <Route path="/register" element={<Register />} />
+                <Route path="/login" element={<Login />} />
+              </>
+            ) : (
+              <>
+                <Route path="/wishlist" element={<Wishlist />} />
+              </>
+            )} */}
+          </Routes>
+        </BrowserRouter>
+      {/* <ToastContainer /> */}
     </div>
   );
 }

@@ -1,22 +1,22 @@
-import hitch from "../../assets/hitch.png"
-import racks from "../../assets/racks.png"
-import fenders from "../../assets/fender.png"
-import fender from "../../assets/fender1.png"
-import lights from "../../assets/light.png"
-import oil from "../../assets/oil.png"
-import bike from "../../assets/bike.png"
-import steering from "../../assets/steering.png"
-import trailer from "../../assets/trailer.png"
-import brakes from "../../assets/brakes.png"
-import speed from "../../assets/speedometer.png"
-import tyre from "../../assets/tyre.png"
-import gear from "../../assets/gearbox.png"
-import userImage from "../../assets/pro.png"
+import hitch from "../../assets/hitch.webp"
+import racks from "../../assets/racks.webp"
+import fenders from "../../assets/fender.webp"
+import fender from "../../assets/fender1.webp"
+import lights from "../../assets/light.webp"
+import oil from "../../assets/oil.webp"
+import bike from "../../assets/bike.webp"
+import steering from "../../assets/steering.webp"
+import trailer from "../../assets/trailer.webp"
+import brakes from "../../assets/brakes.webp"
+import speed from "../../assets/speedometer.webp"
+import tyre from "../../assets/tyre.webp"
+import gear from "../../assets/gearbox.webp"
+import userImage from "../../assets/pro.webp"
 
 export const bestSellerData = [
     {
         id: 0,
-        discountPercent:"-6%",
+        discountPercent: "-6%",
         img: hitch,
         title: "Trailer Hitch",
         rating: "★★★★★",
@@ -25,7 +25,7 @@ export const bestSellerData = [
     },
     {
         id: 1,
-        discountPercent:"-10%",
+        discountPercent: "-10%",
         img: racks,
         title: "Bike rack",
         rating: "★★★★★",
@@ -34,7 +34,7 @@ export const bestSellerData = [
     },
     {
         id: 2,
-        discountPercent:"-6%",
+        discountPercent: "-6%",
         img: hitch,
         title: "Trailer Hitch",
         rating: "★★★★★",
@@ -43,7 +43,7 @@ export const bestSellerData = [
     },
     {
         id: 3,
-        discountPercent:"-10%",
+        discountPercent: "-10%",
         img: racks,
         title: "Bike Rack",
         rating: "★★★★★",
@@ -52,7 +52,7 @@ export const bestSellerData = [
     },
     {
         id: 4,
-        discountPercent:"-6%",
+        discountPercent: "-6%",
         img: hitch,
         title: "Trailer Hitch",
         rating: "★★★★★",
@@ -61,7 +61,7 @@ export const bestSellerData = [
     },
     {
         id: 5,
-        discountPercent:"-10%",
+        discountPercent: "-10%",
         img: racks,
         title: "Bike Rack",
         rating: "★★★★★",
@@ -74,7 +74,7 @@ export const bestSellerData = [
 export const newArrivalData = [
     {
         id: 0,
-        discountPercent:"-6%",
+        discountPercent: "-6%",
         img: hitch,
         title: "Trailer Hitch",
         rating: "★★★★★",
@@ -83,7 +83,7 @@ export const newArrivalData = [
     },
     {
         id: 1,
-        discountPercent:"-10%",
+        discountPercent: "-10%",
         img: racks,
         title: "Bike rack",
         rating: "★★★★★",
@@ -92,7 +92,7 @@ export const newArrivalData = [
     },
     {
         id: 2,
-        discountPercent:"-6%",
+        discountPercent: "-6%",
         img: hitch,
         title: "Trailer Hitch",
         rating: "★★★★★",
@@ -101,7 +101,7 @@ export const newArrivalData = [
     },
     {
         id: 3,
-        discountPercent:"-10%",
+        discountPercent: "-10%",
         img: racks,
         title: "Bike Rack",
         rating: "★★★★★",
@@ -110,7 +110,7 @@ export const newArrivalData = [
     },
     {
         id: 4,
-        discountPercent:"-6%",
+        discountPercent: "-6%",
         img: hitch,
         title: "Trailer Hitch",
         rating: "★★★★★",
@@ -119,7 +119,7 @@ export const newArrivalData = [
     },
     {
         id: 5,
-        discountPercent:"-10%",
+        discountPercent: "-10%",
         img: racks,
         title: "Bike Rack",
         rating: "★★★★★",
@@ -131,7 +131,7 @@ export const newArrivalData = [
 export const topDealsData = [
     {
         id: 0,
-        discountPercent:"-6%",
+        discountPercent: "-6%",
         img: hitch,
         title: "Trailer Hitch",
         rating: "★★★★★",
@@ -140,7 +140,7 @@ export const topDealsData = [
     },
     {
         id: 1,
-        discountPercent:"-10%",
+        discountPercent: "-10%",
         img: racks,
         title: "Bike rack",
         rating: "★★★★★",
@@ -149,7 +149,7 @@ export const topDealsData = [
     },
     {
         id: 2,
-        discountPercent:"-6%",
+        discountPercent: "-6%",
         img: hitch,
         title: "Trailer Hitch",
         rating: "★★★★★",
@@ -158,7 +158,7 @@ export const topDealsData = [
     },
     {
         id: 3,
-        discountPercent:"-10%",
+        discountPercent: "-10%",
         img: racks,
         title: "Bike Rack",
         rating: "★★★★★",
@@ -167,7 +167,7 @@ export const topDealsData = [
     },
     {
         id: 4,
-        discountPercent:"-6%",
+        discountPercent: "-6%",
         img: hitch,
         title: "Trailer Hitch",
         rating: "★★★★★",
@@ -176,7 +176,7 @@ export const topDealsData = [
     },
     {
         id: 5,
-        discountPercent:"-10%",
+        discountPercent: "-10%",
         img: racks,
         title: "Bike Rack",
         rating: "★★★★★",
@@ -188,7 +188,7 @@ export const topDealsData = [
 export const cartData = [
     {
         id: 0,
-        discountPercent:"-6%",
+        discountPercent: "-6%",
         img: hitch,
         title: "Trailer Hitch",
         rating: "★★★★★",
@@ -197,7 +197,7 @@ export const cartData = [
     },
     {
         id: 1,
-        discountPercent:"-6%",
+        discountPercent: "-6%",
         img: hitch,
         title: "Trailer Hitch",
         rating: "★★★★★",
@@ -206,20 +206,20 @@ export const cartData = [
     },
     {
         id: 2,
-        discountPercent:"-6%",
+        discountPercent: "-6%",
         img: hitch,
         title: "Trailer Hitch",
         rating: "★★★★★",
         originalPrice: "$220.00",
         discountedPrice: "$235.00",
     },
-    
+
 ]
 
 export const wishlistData = [
     {
         id: 0,
-        discountPercent:"-6%",
+        discountPercent: "-6%",
         img: hitch,
         title: "Trailer Hitch",
         rating: "★★★★★",
@@ -228,7 +228,7 @@ export const wishlistData = [
     },
     {
         id: 2,
-        discountPercent:"-10%",
+        discountPercent: "-10%",
         img: racks,
         title: "Bike Rack",
         rating: "★★★★★",
@@ -237,7 +237,7 @@ export const wishlistData = [
     },
     {
         id: 3,
-        discountPercent:"-6%",
+        discountPercent: "-6%",
         img: hitch,
         title: "Trailer Hitch",
         rating: "★★★★★",
@@ -246,7 +246,7 @@ export const wishlistData = [
     },
     {
         id: 4,
-        discountPercent:"-10%",
+        discountPercent: "-10%",
         img: racks,
         title: "Bike Rack",
         rating: "★★★★★",
@@ -255,14 +255,14 @@ export const wishlistData = [
     },
     {
         id: 5,
-        discountPercent:"-6%",
+        discountPercent: "-6%",
         img: hitch,
         title: "Trailer Hitch",
         rating: "★★★★★",
         originalPrice: "$220.00",
         discountedPrice: "$235.00",
     },
-    
+
 ]
 
 export const topcollections = [
@@ -301,7 +301,7 @@ export const topcollections = [
         img: fenders,
         title: "Fenders"
     },
-    
+
 ]
 export const allCollections = [
     {
@@ -354,7 +354,7 @@ export const allCollections = [
         img: speed,
         title: "Dashboard"
     },
-    
+
 ]
 
 export const reviewData = [

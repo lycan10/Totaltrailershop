@@ -5,7 +5,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
-import banner from "../../assets/ad25.jpeg";
+import banner from "../../assets/ad25.webp";
 import Slider from "react-slick";
 import { RxHamburgerMenu } from "react-icons/rx";
 import BestSellerCards from "../../constant/bestSellerCards/BestSellerCards";
@@ -13,15 +13,15 @@ import BestSellerCards from "../../constant/bestSellerCards/BestSellerCards";
 import Accordion from "react-bootstrap/Accordion";
 import Table from "react-bootstrap/Table";
 
-import ad1 from "../../assets/ad12.jpeg";
-import ad2 from "../../assets/ad2.jpeg";
-import ad3 from "../../assets/ad3.jpeg";
-import ad4 from "../../assets/ad4.jpeg";
-import filter from "../../assets/filter.png";
+import ad1 from "../../assets/ad12.webp";
+import ad2 from "../../assets/ad2.webp";
+import ad3 from "../../assets/ad3.webp";
+import ad4 from "../../assets/ad4.webp";
+import filter from "../../assets/filter.webp";
 
 import Modal from "react-bootstrap/Modal";
 import { AiOutlineShoppingCart, AiOutlineHeart } from "react-icons/ai";
-import banner2 from "../../assets/5off.png";
+import banner2 from "../../assets/5off.webp";
 import Reviews from "../../components/reviews/Reviews";
 import Newsletter from "../../components/newsletter/Newsletter";
 
@@ -186,7 +186,7 @@ const Deals = () => {
     setValue(e.target.value);
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = () => { };
 
   const handleMinPriceChange = (e) => {
     setMinPrice(e.target.value);
@@ -427,17 +427,15 @@ const Deals = () => {
                 <div className="catalogue-top-filter-left">
                   <div className="catalogue-top-filter-options">
                     <div
-                      className={`catalogue-top-filter-options-grid ${
-                        viewMode === "grid" ? "active" : ""
-                      }`}
+                      className={`catalogue-top-filter-options-grid ${viewMode === "grid" ? "active" : ""
+                        }`}
                       onClick={() => setViewMode("grid")}
                     >
                       <img src={grid} alt="" />
                     </div>
                     <div
-                      className={`catalogue-top-filter-options-list ${
-                        viewMode === "list" ? "active" : ""
-                      }`}
+                      className={`catalogue-top-filter-options-list ${viewMode === "list" ? "active" : ""
+                        }`}
                       onClick={() => setViewMode("list")}
                     >
                       <img src={list} alt="" />
@@ -562,7 +560,7 @@ const Deals = () => {
                     const brandCount = filteredData.reduce(
                       (count, product) =>
                         product.attributes.product.data.attributes.brand ===
-                        brand
+                          brand
                           ? count + 1
                           : count,
                       0

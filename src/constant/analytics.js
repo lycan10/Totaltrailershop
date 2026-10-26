@@ -1,7 +1,7 @@
 import ReactGA from 'react-ga';
 
 export const initGA = () => {
-  ReactGA.initialize('G-757XGDZ579'); // Replace with your tracking code
+  ReactGA.initialize('G-Q100SQBYDV'); // Replace with your tracking code
 };
 
 export const logPageView = () => {

@@ -1,11 +1,11 @@
 import "./AboutImgs.css";
 import React from "react";
 import Slider from "react-slick";
-import p1 from "../../assets/aa1.jpg";
-import p2 from "../../assets/aa2.jpg";
-import p3 from "../../assets/shop3.jpg";
-import p4 from "../../assets/aa3.jpg";
-import p5 from "../../assets/aa4.jpg";
+import p1 from "../../assets/aa1.webp";
+import p2 from "../../assets/aa2.webp";
+import p3 from "../../assets/shop3.webp";
+import p4 from "../../assets/aa3.webp";
+import p5 from "../../assets/aa4.webp";
 
 const AboutImgs = () => {
   const settings = {

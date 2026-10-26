@@ -51,7 +51,7 @@ const Checkout = () => {
     });
   };
 
- 
+
 
   const handleChange = ({ target }) => {
     const newData = {};
@@ -287,7 +287,7 @@ const Checkout = () => {
                               src={
                                 isAvailable
                                   ? strapi.getImageURL(item.product.img)
-                                  : "/unavailable.png"
+                                  : "/unavailable.webp"
                               }
                               alt="pic"
                             />

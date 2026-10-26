@@ -50,7 +50,7 @@ const CartItem = ({ item, refresh }) => {
           src={
             isAvailable
               ? strapi.getImageURL(item.product.img)
-              : "/unavailable.png"
+              : "/unavailable.webp"
           }
           alt=""
         />
