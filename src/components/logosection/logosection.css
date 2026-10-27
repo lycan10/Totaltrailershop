@@ -1,0 +1,68 @@
+.logosection{
+    padding: 4rem 4rem ;
+}
+.logosection-image{
+    display: grid; 
+
+    grid-template-columns: repeat(7, 1fr);
+    row-gap: 2.5rem;
+    column-gap: 0rem;
+   place-items: center;
+}
+.logosection-image img{
+    width: 140px;
+    height: 100px;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1200px) {
+    .logosection{
+        padding: 2rem 3rem;
+    }
+    .logosection-image{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        row-gap: 2.5rem;
+        column-gap: 0rem;
+       place-items: center;
+    }
+    .logosection-image img{
+        width: 140px;
+        height: 100px;
+        object-fit: contain;
+    }
+}
+@media screen and (max-width: 800px) {
+    .logosection{
+        padding: 1rem 2rem;
+    }
+    .logosection-image{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 1.2rem;
+        column-gap: 0rem;
+       place-items: center;
+    }
+    .logosection-image img{
+        width: 100px;
+        height: 80px;
+        object-fit: contain;
+    }
+}
+@media screen and (max-width: 500px) {
+    .logosection{
+        padding: 1rem;
+    }
+    .logosection-image{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 1rem;
+        column-gap: 0rem;
+       place-items: center;
+    }
+    .logosection-image img{
+        width: 100px;
+        height: 70px;
+        object-fit: contain;
+    }
+}

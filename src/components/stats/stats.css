@@ -1,0 +1,101 @@
+.stats {
+    position: relative; /* Enables positioning for the pseudo-element */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 4rem 5rem;
+    background-image: url("../../assets/banner4.webp"); /* Add your image path here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Enables the parallax effect */
+    overflow: hidden;
+}
+
+.stats::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay with opacity */
+    z-index: 1;
+}
+
+.stats > * {
+    position: relative;
+    z-index: 2; /* Ensures the content stays above the overlay */
+}
+
+
+.stats-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.stats-content img{
+    width: 40px;
+    height: 40px;
+
+}
+.stats-content h2{
+    font-family: var(--font-family);
+    margin: 0.5rem 0;
+    font-size: 31px;
+    font-weight: 600;
+    color: white;
+}
+.stats-content p{
+    font-family: var(--font-family);
+    margin: 0;
+    font-size: 15px;
+    max-width: 100%;
+    line-height: 29px;
+    font-weight: 500;
+    color: white;
+}
+
+@media screen and (max-width: 800px) {
+    .stats {
+        padding: 2rem;
+    }
+    .stats-content img{
+        width: 30px;
+        height: 30px;
+    
+    }
+}
+@media screen and (max-width: 500px) {
+    .stats {
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 2rem;
+    }
+    .stats-content img{
+        width: 25px;
+        height: 25px;
+    
+    }
+    .stats-content h2{
+        font-family: var(--font-family);
+        margin: 0.5rem 0;
+        font-size: 21px;
+        font-weight: 600;
+        color: white;
+    }
+    .stats-content p{
+        font-family: var(--font-family);
+        margin: 0;
+        font-size: 13px;
+        max-width: 100%;
+        line-height: 29px;
+        font-weight: 500;
+        color: white;
+    }
+}
+

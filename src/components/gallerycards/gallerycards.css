@@ -1,0 +1,203 @@
+/* gallerycards.css */
+.gallerycards {
+ 
+  }
+  
+  .gallerycard {
+    width: 100%; /* Ensures card width fits the grid cell */
+    max-width: 300px; 
+    display: inline-block;
+
+    border-radius: 4px;
+    box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+
+  }
+  
+  .gallerycard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.3), 0 0 1px 0 rgba(0, 0, 0, 0.25);
+  }
+  
+  .gallerycard:hover .gallerycard-content {
+    box-shadow: inset 0 3px 0 0 var(--background-color1);
+    border-color: var(--background-color1);
+  }
+  
+  .gallerycard:hover .gallerycard-img .overlay {
+    background-color: rgba(25, 29, 38, 0.85);
+    opacity: 1;
+    transition: opacity 0.2s ease;
+  }
+  
+  .gallerycard-img {
+    position: relative;
+    height: 224px;
+    width: 100%;
+    background-color: #fff;
+    transition: opacity 0.2s ease;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .gallerycard-img .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .overlay-content {
+    line-height: 224px;
+    /* width: 100%; */
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .overlay-content a {
+    color: #fff;
+    padding: 0 2rem;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .overlay-content a:hover {
+    background-color: var(--background-color1);
+    border-color: var(--background-color1);
+  }
+  
+  .gallerycard-content {
+    /* width: 100%; */
+    min-height: 104px;
+    
+    background-color: #fff;
+    border-top: 1px solid #e9e9eb;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding: 1rem 2rem;
+    transition: all 0.2s ease;
+    height: 120px !important;
+  }
+
+  
+  .gallerycard-content a {
+    text-decoration: none;
+    color: #202927;
+  }
+  
+  .gallerycard-content h2 {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .gallerycard-content p {
+    font-size: 0.8rem;
+    font-weight: 400;
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+    color: rgba(32, 41, 28, 0.8);
+  }
+  
+  @media screen and (max-width: 1440px) {
+    .gallerycard {
+        width: 100%; /* Ensures card width fits the grid cell */
+        max-width: 290px; 
+        display: inline-block;
+    
+        border-radius: 4px;
+        box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease;
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+    
+      }
+}
+@media screen and (max-width: 1200px) {
+    .gallerycard {
+        width: 100%; /* Ensures card width fits the grid cell */
+        max-width: 280px; 
+        display: inline-block;
+    
+        border-radius: 4px;
+        box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease;
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+    
+      }
+}
+@media screen and (max-width: 800px) {
+    .gallerycard {
+        width: 100%; /* Ensures card width fits the grid cell */
+        max-width: 330px; 
+        display: inline-block;
+    
+        border-radius: 4px;
+        box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease;
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+    
+      }
+}
+@media screen and (max-width: 500px) {
+    .gallerycard {
+        width: 100%; /* Ensures card width fits the grid cell */
+        max-width: 180px; 
+        display: inline-block;
+    
+        border-radius: 4px;
+        box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease;
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+    
+      }
+      .gallerycard-img {
+        position: relative;
+        height: 150px;
+        width: 100%;
+        background-color: #fff;
+        transition: opacity 0.2s ease;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .overlay-content {
+        line-height: 150px;
+        /* width: 100%; */
+        text-align: center;
+        color: #fff;
+        cursor: pointer;
+      }
+      .gallerycard-content {
+        /* width: 100%; */
+        height: 160px !important;
+        background-color: #fff;
+        border-top: 1px solid #e9e9eb;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        padding: 1rem 1rem;
+        transition: all 0.2s ease;
+      }
+}

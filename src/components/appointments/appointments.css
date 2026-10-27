@@ -1,0 +1,82 @@
+.modal-booking-container{
+  
+}
+.modal-booking-title{
+
+}
+
+.modal-booking-title p{
+  font-size: 13px;
+  font-weight: 400;
+  font-family: var(--font-family);
+  color: var(--color);
+  margin: 0 0 0px;
+}
+.modal-booking-form-container{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  padding: 0 1.5rem;
+}
+.modal-booking-form{
+  width: 100%;
+
+
+}
+
+.modal-booking-form input{
+  width: 100%;
+  height: 70px;
+  padding: 0 1rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  background-color: #F4F5F8;
+
+} 
+.modal-booking-textarea {
+  
+ padding: 1.5rem;
+
+}
+.modal-booking-textarea textarea{
+  
+  width: 100%;
+  height: 150px;
+  padding:  1rem;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  background-color: #F4F5F8;
+
+} 
+.modal-booking-form select{
+  width: 100%;
+  border: 1px solid #e4e4e4;
+  height: 50px;
+  padding: 0 1rem;
+  padding-right: 2rem;
+  outline: none;
+  border-radius: 0.5rem;
+
+}
+.modal-booking-button{
+  margin: 0 1.5rem 1.5rem;
+  width: 200px;
+  height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+  border-radius: 2rem;
+  background-color: var(--background-color1);
+
+} 
+.modal-booking-button p{
+  color: white;
+
+} 
+.booking-modal{
+  overflow: scroll;
+}
